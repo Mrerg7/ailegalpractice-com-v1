@@ -1,4 +1,6 @@
 ---
+import { getCanonicalURL } from '../utils/canonical';
+
 interface Props {
   title: string;
   description: string;
@@ -7,7 +9,7 @@ interface Props {
 }
 
 const { title, description, ogImage, pathname } = Astro.props;
-const canonicalURL = new URL(pathname, Astro.site);
+const canonicalURL = getCanonicalURL(pathname);
 ---
 
 <meta name="title" content={title} />

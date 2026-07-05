@@ -1,4 +1,5 @@
 name = "ailegalpractice-com-v1"
+main = "src/worker.ts"
 compatibility_date = "2026-06-25"
 workers_dev = false
 preview_urls = false
@@ -7,6 +8,12 @@ preview_urls = false
 pattern = "ailegalpractice.com"
 custom_domain = true
 
+[[routes]]
+pattern = "www.ailegalpractice.com"
+custom_domain = true
+
 [assets]
 directory = "./dist"
+binding = "ASSETS"
+run_worker_first = true
 html_handling = "auto-trailing-slash"

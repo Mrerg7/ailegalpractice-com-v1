@@ -11,8 +11,9 @@ const heroBgImage = 'https://imagedelivery.net/-sPAUAWeA405NiWJ0SNIQA/24b29b9e-b
 ---
 
 <Layout title={title} description={description} ogImage={ogImage}>
-  <SEO title={title} description={description} ogImage={ogImage} pathname="/" />
+  <SEO slot="head" title={title} description={description} ogImage={ogImage} pathname="/" />
   <StructuredData
+    slot="head"
     schema={{
       '@context': 'https://schema.org',
       '@graph': [
@@ -20,7 +21,7 @@ const heroBgImage = 'https://imagedelivery.net/-sPAUAWeA405NiWJ0SNIQA/24b29b9e-b
           '@type': 'WebSite',
           name: 'ailegalpractice.com',
           description: description,
-          url: 'https://ailegalpractice.com',
+          url: 'https://ailegalpractice.com/',
         },
         {
           '@type': 'Product',
@@ -31,7 +32,7 @@ const heroBgImage = 'https://imagedelivery.net/-sPAUAWeA405NiWJ0SNIQA/24b29b9e-b
             availability: 'https://schema.org/InStock',
             price: '24997',
             priceCurrency: 'USD',
-            url: 'https://ailegalpractice.com',
+            url: 'https://ailegalpractice.com/',
             businessFunction: 'https://schema.org/Sell',
           },
         },
