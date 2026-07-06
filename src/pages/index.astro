@@ -27,6 +27,12 @@ const heroBgImage = 'https://imagedelivery.net/-sPAUAWeA405NiWJ0SNIQA/24b29b9e-b
           '@type': 'Product',
           name: 'ailegalpractice.com Domain',
           description: 'Premium domain name for a premier AI Legal Practice. The definitive, category-defining .com domain for the leading firm in artificial intelligence law, compliance, and legal services.',
+          image: ogImage,
+          sku: 'ailegalpractice-com',
+          brand: {
+            '@type': 'Brand',
+            name: 'ailegalpractice.com',
+          },
           aggregateRating: {
             '@type': 'AggregateRating',
             ratingValue: '5',
@@ -57,6 +63,39 @@ const heroBgImage = 'https://imagedelivery.net/-sPAUAWeA405NiWJ0SNIQA/24b29b9e-b
             priceCurrency: 'USD',
             url: 'https://ailegalpractice.com/',
             businessFunction: 'https://schema.org/Sell',
+            itemCondition: 'https://schema.org/NewCondition',
+            hasMerchantReturnPolicy: {
+              '@type': 'MerchantReturnPolicy',
+              applicableCountry: 'US',
+              returnPolicyCategory: 'https://schema.org/MerchantReturnNotPermitted',
+            },
+            shippingDetails: {
+              '@type': 'OfferShippingDetails',
+              shippingRate: {
+                '@type': 'MonetaryAmount',
+                value: '0',
+                currency: 'USD',
+              },
+              shippingDestination: {
+                '@type': 'DefinedRegion',
+                addressCountry: ['US', 'CA', 'GB', 'AU', 'DE', 'FR'],
+              },
+              deliveryTime: {
+                '@type': 'ShippingDeliveryTime',
+                handlingTime: {
+                  '@type': 'QuantitativeValue',
+                  minValue: 0,
+                  maxValue: 1,
+                  unitCode: 'DAY',
+                },
+                transitTime: {
+                  '@type': 'QuantitativeValue',
+                  minValue: 0,
+                  maxValue: 3,
+                  unitCode: 'DAY',
+                },
+              },
+            },
           },
         },
       ],
