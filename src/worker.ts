@@ -7,7 +7,7 @@ const CANONICAL_HOST = 'ailegalpractice.com';
 function canonicalRedirect(url: URL): URL | null {
   const redirect = new URL(url);
 
-  if (url.hostname === `www.${CANONICAL_HOST}` || url.hostname !== CANONICAL_HOST) {
+  if (url.hostname === `www.${CANONICAL_HOST}`) {
     redirect.hostname = CANONICAL_HOST;
     redirect.protocol = 'https:';
     return redirect;
